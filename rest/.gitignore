@@ -1,0 +1,8 @@
+/target
+/.settings
+/workspace_springtoolsuite
+.classpath
+.project
+
+#add STS ignore
+.springBeans
