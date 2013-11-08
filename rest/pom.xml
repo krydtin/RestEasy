@@ -5,6 +5,10 @@
 	<artifactId>rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<properties>
+		<autodeploy.folder>D:\Eclipse\jboss-as-7.1.1.Final_sts\jboss-as-7.1.1.Final\standalone\deployments</autodeploy.folder>
+		<war.name>DemoRestEasy</war.name>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
@@ -12,5 +16,27 @@
 			<version>3.0.5.Final</version>
 		</dependency>
 	</dependencies>
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webappDirectory>${project.build.directory}/${project.build.finalName}/rest</webappDirectory>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+					<outputDirectory>${autodeploy.folder}</outputDirectory>
+					<warName>${war.name}</warName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
