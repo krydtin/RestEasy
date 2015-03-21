@@ -6,7 +6,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<properties>
-		<autodeploy.folder>D:\Eclipse\jboss-as-7.1.1.Final_sts\jboss-as-7.1.1.Final\standalone\deployments</autodeploy.folder>
+		<!--<autodeploy.folder>D:\Eclipse\jboss-as-7.1.1.Final_sts\jboss-as-7.1.1.Final\standalone\deployments</autodeploy.folder>-->
+		<autodeploy.folder>/home/krydtin/jboss-as-7.1.1.Final/standalone/deployments</autodeploy.folder>
 		<war.name>DemoRestEasy</war.name>
 	</properties>
 	<dependencies>
@@ -47,7 +48,7 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<plugin>
+<!--			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
@@ -56,7 +57,7 @@
 					<outputDirectory>${autodeploy.folder}</outputDirectory>
 					<warName>${war.name}</warName>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
     <repositories>
