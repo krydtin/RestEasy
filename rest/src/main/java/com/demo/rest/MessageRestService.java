@@ -8,14 +8,15 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/message")
 public class MessageRestService {
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/{param}")
-	public String printMessage(@PathParam("param") String msg) {
 
-		String result = "Restful example :D " + msg;
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("/{param}")
+    public String printMessage(@PathParam("param") String msg) {
 
-		return result;
+        String result = "Restful example :D " + msg;
 
-	}
+        return result;
+
+    }
 }
