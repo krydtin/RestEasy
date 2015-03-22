@@ -14,7 +14,7 @@ public class MessageRestService {
     @Path("/{param}")
     public String printMessage(@PathParam("param") String msg) {
 
-        String result = "Restful example :P 555 " + msg;
+        String result = "Restfuly example :P " + msg;
 
         return result;
 
